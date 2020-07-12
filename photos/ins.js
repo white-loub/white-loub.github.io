@@ -116,20 +116,20 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = 'https://raw.githubusercontent.com/white-loub/white-loub.github.io/master/photos/min_photos/' + data.link[i] + '.min.jpg';
+		  var minSrc = 'https://raw.githubusercontent.com/white-loub/white-loub.github.io/master/photos/min_photos/' + data.link[i];
           var src = 'https://raw.githubusercontent.com/white-loub/white-loub.github.io/master/photos/photos/' + data.link[i];
           var type = data.type[i];
           var target = src + (type === 'video' ? '.mp4' : '.jpg');
-          //src += '.jpg';
+          src += '';
 
           liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
-                <a href="' + src + '" itemprop="contentUrl" data-size="640x640" data-type="' + type + '" data-target="' + target + '">\
+                <a href="' + src + '" itemprop="contentUrl" data-size="1080x1080" data-type="' + type + '" data-target="' + src + '">\
                   <img class="reward-img" data-type="' + type + '" data-src="' + minSrc + '" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none" itemprop="caption description">' + data.text[i] + '</figcaption>\
             </figure>';
         }
-        ulTmpl = ulTmpl + '<section class="archives album"><h1 class="year">' + data.year + '<em>' + data.month + '月</em></h1>\
+        ulTmpl = ulTmpl + '<section class="archives album"><h1 class="year">' + data.year + '年<em>' + data.month + '月</em></h1>\
         <ul class="img-box-ul">' + liTmpl + '</ul>\
         </section>';
       }
@@ -138,7 +138,6 @@
       _view2.default.init();
     };
 
-	//2020.7.12 好像是备份的文件夹，使用中应该不容易出现这种情况，故未修改
     var replacer = function replacer(str) {
       var arr = str.split("/");
       return "/assets/ins/" + arr[arr.length - 1];
