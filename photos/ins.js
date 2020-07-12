@@ -119,9 +119,8 @@
           var minSrc = 'https://raw.githubusercontent.com/white-loub/white-loub.github.io/master/photos/min_photos/' + data.link[i] + '.min.jpg';
           var src = 'https://raw.githubusercontent.com/white-loub/white-loub.github.io/master/photos/photos/' + data.link[i];
           var type = data.type[i];
-		  var target = src;
-          //var target = src + (type === 'video' ? '.mp4' : '.jpg');
-          src += '.jpg';
+          var target = src + (type === 'video' ? '.mp4' : '.jpg');
+          //src += '.jpg';
 
           liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
                 <a href="' + src + '" itemprop="contentUrl" data-size="640x640" data-type="' + type + '" data-target="' + target + '">\
@@ -139,6 +138,7 @@
       _view2.default.init();
     };
 
+	//2020.7.12 好像是备份的文件夹，使用中应该不容易出现这种情况，故未修改
     var replacer = function replacer(str) {
       var arr = str.split("/");
       return "/assets/ins/" + arr[arr.length - 1];
