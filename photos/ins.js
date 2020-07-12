@@ -116,10 +116,11 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = 'https://raw.githubusercontent.com/white-loub/white-loub.github.io/master/assets/photos/min_photos/' + data.link[i] + '.min.jpg';
-          var src = 'https://raw.githubusercontent.com/white-loub/white-loub.github.io/master/assets/photos/photos/' + data.link[i];
+          var minSrc = 'https://raw.githubusercontent.com/white-loub/white-loub.github.io/master/photos/min_photos/' + data.link[i] + '.min.jpg';
+          var src = 'https://raw.githubusercontent.com/white-loub/white-loub.github.io/master/photos/photos/' + data.link[i];
           var type = data.type[i];
-          var target = src + (type === 'video' ? '.mp4' : '.jpg');
+		  var target = src;
+          //var target = src + (type === 'video' ? '.mp4' : '.jpg');
           src += '.jpg';
 
           liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
