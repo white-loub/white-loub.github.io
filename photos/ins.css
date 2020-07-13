@@ -82,7 +82,10 @@
 	top: 0;
 	left: 0;
 	bottom: 0px;
-	width: 100%;
+	
+	width: 10px;
+	height: 10px;
+	
 	margin: -5px;
 	padding: 5px;
 	-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);
