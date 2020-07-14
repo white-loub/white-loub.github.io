@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://white-loub.github.io/photos/data.json</loc>
+    
+    <lastmod>2020-07-14T13:19:47.249Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://white-loub.github.io/2020/07/13/Hello%20World%EF%BC%81/</loc>
     
     <lastmod>2020-07-13T15:14:56.210Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://white-loub.github.io/origin&test_posts/diary-2016-1225-1231.html</loc>
     
     <lastmod>2020-07-13T12:36:05.250Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://white-loub.github.io/photos/data.json</loc>
-    
-    <lastmod>2020-07-13T02:23:57.173Z</lastmod>
     
   </url>
   
